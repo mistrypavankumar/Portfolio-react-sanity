@@ -3,6 +3,7 @@ import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { images } from "../../constants";
 import "./Navbar.scss";
+import { menusData } from "../../constants/menusData";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -15,7 +16,7 @@ const Navbar = () => {
         <span>/&gt;</span>
       </div>
       <ul className="app__navbar-links">
-        {["home", "about", "contact", "work", "skills"].map((item) => {
+        {menusData.map((item) => {
           return (
             <li key={`link-${item}`} className="app__flex p-text">
               <div />
@@ -33,16 +34,17 @@ const Navbar = () => {
             transition={{ duration: 0.85, ease: "easeOut" }}
           >
             <HiX onClick={() => setToggle(false)} />
-
-            {["home", "about", "contact", "work", "skills"].map((item) => {
-              return (
-                <li key={item}>
-                  <a onClick={() => setToggle(false)} href={`#${item}`}>
-                    {item}
-                  </a>
-                </li>
-              );
-            })}
+            <ul>
+              {menusData.map((item) => {
+                return (
+                  <li key={item}>
+                    <a onClick={() => setToggle(false)} href={`#${item}`}>
+                      {item}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
           </motion.div>
         )}
       </div>

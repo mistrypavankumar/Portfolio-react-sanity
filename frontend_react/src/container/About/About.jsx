@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { urlFor, client } from "../../client";
 
 import "./About.scss";
-import { AppWrap } from "../../Warpper";
+import { AppWrap } from "../../Wrapper";
 
 const About = () => {
   const [about, setAbout] = useState([]);

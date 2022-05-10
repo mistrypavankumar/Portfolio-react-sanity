@@ -21,30 +21,5 @@ export default {
         hotspot: true,
       },
     },
-    {
-      name: "codeLink",
-      title: "CodeLink",
-      type: "string",
-    },
-    {
-      name: "imgUrl",
-      title: "ImgURL",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-    },
-    {
-      name: "tags",
-      title: "Tags",
-      type: "array",
-      of: [
-        {
-          name: "tag",
-          title: "Tag",
-          type: "string",
-        },
-      ],
-    },
   ],
 };

@@ -18,30 +18,5 @@ export default {
       title: "Message",
       type: "text",
     },
-    {
-      name: "codeLink",
-      title: "CodeLink",
-      type: "string",
-    },
-    {
-      name: "imgUrl",
-      title: "ImgURL",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-    },
-    {
-      name: "tags",
-      title: "Tags",
-      type: "array",
-      of: [
-        {
-          name: "tag",
-          title: "Tag",
-          type: "string",
-        },
-      ],
-    },
   ],
 };
